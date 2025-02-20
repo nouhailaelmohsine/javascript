@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>objects</title>
+</head>
+
+<body>
+    <script>
+        const product = {
+            name: 'skin care',
+            price: '1000',
+            rating: {
+                starts:4.5,
+                count: 100
+            },
+            fun: function nouhaila(){
+                console.log("using functions in object");
+            }
+        };
+       /* console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+        product.name= 'hair care' ;*/
+        console.log(product.name);
+        console.log(product.rating.starts);
+        console.log(product.rating.count);
+        product.fun();
+        /*function inside object = method
+        JSON java script object notation
+        la difference entre json et object c'est que 
+        json est universail et on peut l'utiliser dans presque tous
+        les langues de programation contre à l'object qui est propre
+         à java script */
+        console.log(JSON.stringify(product));
+        console.log( typeof JSON.stringify(product));
+
+        const JSONstring = JSON.stringify(product);
+        console.log(JSON.parse(JSONstring));
+
+
+        const nouhaila ={
+            age : 20,
+            school : 'ensat',
+        }
+        console.log(nouhaila);
+        const mohsine = nouhaila;
+        console.log(mohsine);
+        const Elmohsine ={
+            ge : 20,
+            school : 'ensat',
+        }
+        console.log(Elmohsine === nouhaila);
+        console.log(mohsine === nouhaila);
+        /* when we comparing objects we are comparing references not content
+        elmohsine et nouhaila ont meme contenue mais pas meme refrence
+        par contre nouhaila et mohsine ont mama contenue et meme reference */
+        
+        const nouha ={
+            age : 20,
+            school : 'ensat',
+        }
+        /* shortcut destrutcor*/
+        const {age , school} = nouha;
+        console.log(age );
+        console.log(school );
+        
+    </script>
+</body>
+
+</html>
